@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>The Campsite</title>
+</head>
+<body>
+    <div id="preread" class="tohide">
+        <button class="tohide" id="read" onclick="read();"><img class="tohide" src="icon.png" alt="Read"></button>
+        <div class="tohide right">
+            <p class="tohide booktitle">The Campsite</p>
+            <label class="tohide" id="pagelabel" for="pageselect">Page Number</label>
+            <input class="tohide" oninput="fixPageNum()" type="number" name="pageselect" id="pagenumber">
+            <p class="tohide bookblurb">You wanted some peace and decided to go camping<br>Upon a mountain, disconnected from society, it takes a turn for the worse</p>
+            <button onclick="read();" class="readbutton tohide">Read</button>
+        </div>
+    </div>
+    <div id="reading" class="hide">
+        <div class="book">
+            <div class="page" id="leftpage">
+                <p class="pagenum" id="leftpagenum">Page 1</p>
+                <p class="pagetxt" id="leftpagetext"></p>
+            </div>
+            <div class="line"></div>
+            <div class="page" id="rightpage">
+                <p class="pagenum" id="rightpagenum">Page 2</p>
+                <p class="pagetxt" id="rightpagetext"></p>
+            </div>
+        </div>
+        <button onclick="prevPage()" id="backpage"><img src="back.png" alt="Back"></button>
+        <button onclick="nextPage()" id="nextpage"><img src="next.png" alt="Next"></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
